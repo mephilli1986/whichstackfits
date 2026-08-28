@@ -35,8 +35,11 @@ const tools: Tool[] = [
       { label: "Contracts", note: "Templates with e-signature; contract-to-payment in one flow." },
     ],
     pricingNotes: [
-      "Tiered monthly plans with an annual discount. Verify on vendor pricing page.",
-      "Payment processing fees apply on top of the subscription. Verify on vendor pricing page.",
+      "Starter: $36/month, or $29/month billed annually.",
+      "Essentials: $59/month, or $49/month billed annually.",
+      "Premium: $129/month, or $109/month billed annually.",
+      "Payment processing fees are extra, on top of the subscription.",
+      "US and Canada availability still matters — check before committing.",
     ],
   },
   {
@@ -54,25 +57,31 @@ const tools: Tool[] = [
       { label: "Contracts", note: "Contracts and sub-agreements with e-signature." },
     ],
     pricingNotes: [
-      "Priced by number of active clients rather than features; free trial has no time limit but caps clients. Verify on vendor pricing page.",
+      "Starter: $335/year.",
+      "Premier: $525/year.",
+      "The official page presents annual pricing; free to start.",
+      "Unlimited clients on both listed plans.",
     ],
   },
   {
     name: "17hats",
     url: "https://www.17hats.com",
     forWho:
-      "Solo operators who want the basics — lead capture, quotes, contracts, invoices, bookkeeping-lite — handled in one place without building custom workflows. It leans practical over pretty: a working back office for a one-person business at a lower total cost than the two above.",
+      "Solo operators who want the basics — lead capture, quotes, contracts, invoices, bookkeeping-lite — handled in one place without building custom workflows. It leans practical over pretty: a working back office for a one-person business, now sold as a single plan instead of a feature ladder.",
     notFor:
       "Growing teams (it's built around a solo operator), design-sensitive businesses that want a branded client experience, or anyone who needs strong integrations and marketing email. If you expect to hire staff this year, look at HoneyBook or Dubsado first. Not construction software.",
     includes: [
       { label: "CRM", note: "Contacts, leads, and project tracking." },
       { label: "Email", note: "Templates and simple automations; not a marketing platform." },
-      { label: "Scheduling", note: "Online scheduling included on higher tiers." },
+      { label: "Scheduling", note: "Online scheduling included; advanced scheduling is a paid add-on." },
       { label: "Invoicing", note: "Quotes, invoices, recurring billing, and basic bookkeeping." },
       { label: "Contracts", note: "Contracts with e-signature." },
     ],
     pricingNotes: [
-      "Three tiers; scheduling and some automations are gated to the upper tiers. Verify on vendor pricing page.",
+      "One paid plan with billing choices commonly shown as $60/month, $600/year, or $800 for two years — the old Essentials / Standard / Premier ladder is no longer the current public offer.",
+      "A limited Free CRM tier exists.",
+      "Document limits and add-ons (extra users, advanced scheduling, bank connect) still apply.",
+      "Confirm the live grid on 17hats.com/pricing — their page has changed structure.",
     ],
   },
   {
@@ -91,7 +100,10 @@ const tools: Tool[] = [
       { label: "Contracts", note: "None. No proposals or e-signatures." },
     ],
     pricingNotes: [
-      "Free plan exists with real limits on contacts and funnels; paid tiers lift the caps. Verify on vendor pricing page.",
+      "Free: $0 — up to 2,000 contacts and 3 funnels. No credit card required.",
+      "Startup: $17/month — up to 5,000 contacts and 10 funnels.",
+      "Webinar: $47/month — up to 10,000 contacts, adds evergreen webinars.",
+      "Unlimited: $97/month — unlimited contacts, funnels, and automation rules.",
     ],
   },
 ];
@@ -143,7 +155,7 @@ export default function AllInOne() {
             </ul>
 
             <h3 className="mt-5 font-semibold text-ink">
-              Pricing — as of August 28, 2026
+              Pricing — checked August 28, 2026
             </h3>
             <ul className="mt-2 space-y-1.5 text-slate-600">
               {t.pricingNotes.map((p) => (
@@ -151,7 +163,7 @@ export default function AllInOne() {
               ))}
             </ul>
             <p className="mt-2 text-sm text-slate-500">
-              Prices must be checked on the vendor page before publish.
+              Prices change. Recheck the vendor pricing page before you buy.
             </p>
 
             <div className="mt-6 flex flex-wrap items-center gap-3">
