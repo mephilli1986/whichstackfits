@@ -1,4 +1,6 @@
-const categories = [
+import Link from "next/link";
+
+const categories: { name: string; description: string; href?: string }[] = [
   {
     name: "CRM",
     description:
@@ -18,6 +20,7 @@ const categories = [
     name: "All-in-one platforms",
     description:
       "One tool for CRM, email, invoicing, and booking — when consolidating beats best-of-breed.",
+    href: "/compare/all-in-one",
   },
 ];
 
@@ -56,26 +59,43 @@ export default function Home() {
           platforms for teams of 1–20 — with current pricing and a straight
           answer on who each tool is actually for.
         </p>
-        <a
-          href="#categories"
-          className="mt-8 inline-block rounded-md bg-ink px-6 py-3 font-medium text-white transition-colors hover:bg-ink-dark"
-        >
-          See the categories
-        </a>
+        <div className="mt-8 flex flex-wrap items-center gap-5">
+          <Link
+            href="/compare/all-in-one"
+            className="inline-block rounded-md bg-ink px-6 py-3 font-medium text-white transition-colors hover:bg-ink-dark"
+          >
+            Read the all-in-one guide
+          </Link>
+          <a href="#categories" className="font-medium text-ink hover:underline">
+            Browse categories
+          </a>
+        </div>
       </section>
 
       <section id="categories" className="mx-auto max-w-5xl scroll-mt-8 px-6 py-16">
         <h2 className="text-2xl font-bold tracking-tight text-ink">Categories</h2>
         <div className="mt-8 grid gap-6 sm:grid-cols-2">
-          {categories.map((c) => (
-            <div key={c.name} className="rounded-lg border border-slate-200 bg-white p-6">
-              <h3 className="text-lg font-semibold text-ink">{c.name}</h3>
-              <p className="mt-2 leading-relaxed text-slate-600">{c.description}</p>
-              <p className="mt-4 text-sm font-medium text-slate-400">
-                Guides coming this week.
-              </p>
-            </div>
-          ))}
+          {categories.map((c) =>
+            c.href ? (
+              <Link
+                key={c.name}
+                href={c.href}
+                className="rounded-lg border border-slate-200 bg-white p-6 transition-colors hover:border-ink"
+              >
+                <h3 className="text-lg font-semibold text-ink">{c.name}</h3>
+                <p className="mt-2 leading-relaxed text-slate-600">{c.description}</p>
+                <p className="mt-4 text-sm font-medium text-ink">Read the guide →</p>
+              </Link>
+            ) : (
+              <div key={c.name} className="rounded-lg border border-slate-200 bg-white p-6">
+                <h3 className="text-lg font-semibold text-ink">{c.name}</h3>
+                <p className="mt-2 leading-relaxed text-slate-600">{c.description}</p>
+                <p className="mt-4 text-sm font-medium text-slate-400">
+                  No guide published yet.
+                </p>
+              </div>
+            )
+          )}
         </div>
       </section>
 

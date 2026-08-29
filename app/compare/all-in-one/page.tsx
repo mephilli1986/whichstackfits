@@ -128,6 +128,103 @@ export default function AllInOne() {
         Some links are affiliate links. Commissions do not change the review.
       </p>
 
+      <p className="mt-6">
+        <span className="inline-block rounded-full border border-slate-300 bg-white px-3 py-1 text-sm font-medium text-ink">
+          Pricing checked August 28, 2026
+        </span>
+      </p>
+
+      <div className="mt-6 overflow-x-auto rounded-lg border border-slate-200 bg-white">
+        <table className="w-full min-w-[640px] border-collapse text-sm">
+          <thead>
+            <tr className="border-b border-slate-200 text-left">
+              <th className="p-3 font-semibold text-ink"></th>
+              <th className="p-3 font-semibold text-ink">HoneyBook</th>
+              <th className="p-3 font-semibold text-ink">Dubsado</th>
+              <th className="p-3 font-semibold text-ink">17hats</th>
+              <th className="p-3 font-semibold text-ink">Systeme.io</th>
+            </tr>
+          </thead>
+          <tbody className="align-top text-slate-600">
+            {[
+              [
+                "Best for",
+                "Polished client experience",
+                "Deep customization",
+                "Solo back office",
+                "Funnels, email, courses",
+              ],
+              [
+                "CRM",
+                "Projects & pipeline",
+                "Projects & client portal",
+                "Contacts & projects",
+                "Email list, not client projects",
+              ],
+              [
+                "Email marketing",
+                "Thin",
+                "Thin",
+                "Thin",
+                "Strong — broadcasts & automation",
+              ],
+              [
+                "Scheduling",
+                "Built in",
+                "Built in",
+                "Included; advanced is an add-on",
+                "None native",
+              ],
+              [
+                "Contracts / e-sign",
+                "Yes",
+                "Yes",
+                "Yes",
+                "No",
+              ],
+              [
+                "Starting price",
+                "$36/mo ($29/mo annual)",
+                "$335/year",
+                "$60/mo ($600/year)",
+                "Free; paid from $17/mo",
+              ],
+              [
+                "Who should skip it",
+                "Email-marketing-heavy teams; outside US/Canada",
+                "Anyone unwilling to invest setup time",
+                "Growing teams",
+                "Client-service studios",
+              ],
+            ].map(([label, ...cells]) => (
+              <tr key={label} className="border-b border-slate-100 last:border-0">
+                <th className="p-3 text-left font-medium text-slate-800">{label}</th>
+                {cells.map((cell, i) => (
+                  <td key={i} className="p-3 leading-relaxed">{cell}</td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <ul className="mt-6 grid gap-3 sm:grid-cols-2">
+        {[
+          ["Best client experience", "HoneyBook"],
+          ["Best customization", "Dubsado"],
+          ["Best solo back office", "17hats"],
+          ["Best audience / marketing stack", "Systeme.io"],
+        ].map(([label, tool]) => (
+          <li
+            key={label}
+            className="rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm"
+          >
+            <span className="font-medium text-slate-500">{label}: </span>
+            <span className="font-semibold text-ink">{tool}</span>
+          </li>
+        ))}
+      </ul>
+
       <div className="mt-12 space-y-12">
         {tools.map((t, i) => (
           <section
