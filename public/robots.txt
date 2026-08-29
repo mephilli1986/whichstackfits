@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://whichstackfits.com/sitemap.xml
+Sitemap: https://www.whichstackfits.com/sitemap.xml
