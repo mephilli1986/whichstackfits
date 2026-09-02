@@ -20,6 +20,12 @@ export default function About() {
           date every review, and disclose affiliate relationships.
         </p>
         <p>Based in Scottsdale, AZ.</p>
+        <p>
+          Contact:{" "}
+          <a href="mailto:mark@whichstackfits.com" className="text-ink underline">
+            mark@whichstackfits.com
+          </a>
+        </p>
       </div>
     </main>
   );

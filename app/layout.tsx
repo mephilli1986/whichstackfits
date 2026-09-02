@@ -32,6 +32,11 @@ export default function RootLayout({
         <footer className="border-t border-slate-200">
           <div className="mx-auto max-w-5xl space-y-3 px-6 py-10 text-sm text-slate-500">
             <p className="font-medium text-slate-700">WhichStackFits · Scottsdale, AZ</p>
+            <p>
+              <a href="mailto:mark@whichstackfits.com" className="hover:text-ink">
+                mark@whichstackfits.com
+              </a>
+            </p>
             <p className="max-w-2xl">
               Affiliate disclosure: Some links will be affiliate links. We may earn a
               commission if you buy through them. It does not change the review.
