@@ -79,7 +79,7 @@ const tools: Tool[] = [
     ],
     pricingNotes: [
       "One paid plan with billing choices commonly shown as $60/month, $600/year, or $800 for two years — the old Essentials / Standard / Premier ladder is no longer the current public offer.",
-      "A limited Free CRM tier exists.",
+      "The official pricing page shows a 7-day trial, not a free CRM.",
       "Document limits and add-ons (extra users, advanced scheduling, bank connect) still apply.",
       "Confirm the live grid on 17hats.com/pricing — their page has changed structure.",
     ],
@@ -101,7 +101,7 @@ const tools: Tool[] = [
     ],
     pricingNotes: [
       "Free: $0 — up to 2,000 contacts and 3 funnels. No credit card required.",
-      "Startup: $17/month — up to 5,000 contacts and 10 funnels.",
+      "Startup: $17/month — up to 5,000 contacts, 10 funnels, 5 courses.",
       "Webinar: $47/month — up to 10,000 contacts, adds evergreen webinars.",
       "Unlimited: $97/month — unlimited contacts, funnels, and automation rules.",
     ],
@@ -130,7 +130,7 @@ export default function AllInOne() {
 
       <p className="mt-6">
         <span className="inline-block rounded-full border border-slate-300 bg-white px-3 py-1 text-sm font-medium text-ink">
-          Pricing checked August 28, 2026
+          Pricing checked September 1, 2026
         </span>
       </p>
 
@@ -252,7 +252,7 @@ export default function AllInOne() {
             </ul>
 
             <h3 className="mt-5 font-semibold text-ink">
-              Pricing — checked August 28, 2026
+              Pricing — checked September 1, 2026
             </h3>
             <ul className="mt-2 space-y-1.5 text-slate-600">
               {t.pricingNotes.map((p) => (
