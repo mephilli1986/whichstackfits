@@ -26,7 +26,7 @@ const tools: Tool[] = [
     forWho:
       "Solo service providers and small studios who sell projects to individual clients — photographers, planners, designers, coaches — and want proposals, contracts, invoicing, and payments in one polished flow. If your bottleneck is the lead-to-booked-client handoff, this is the strongest of the four at it.",
     notFor:
-      "Teams that need serious email marketing (broadcasts and automation are thin compared to a dedicated email tool), businesses selling courses or digital products at volume, or anyone outside the US and Canada — availability and payment processing are limited by region. Not construction software; it manages clients, not job sites.",
+      "Teams that need serious email marketing (broadcasts and automation are thin compared to a dedicated email tool), businesses selling courses or digital products at volume, or anyone outside the U.S., Canada, UK, and Australia — availability is limited to those four countries, and payment processing details vary by country. Not construction software; it manages clients, not job sites.",
     includes: [
       { label: "CRM", note: "Lead capture, pipeline, and client workspaces built around projects." },
       { label: "Email", note: "Client communication and templates; not a marketing email platform." },
@@ -39,7 +39,7 @@ const tools: Tool[] = [
       "Essentials: $59/month, or $49/month billed annually.",
       "Premium: $129/month, or $109/month billed annually.",
       "Payment processing fees are extra, on top of the subscription.",
-      "US and Canada availability still matters — check before committing.",
+      "Availability checked September 1, 2026 against HoneyBook's UK/Australia launch post.",
     ],
   },
   {
@@ -191,7 +191,7 @@ export default function AllInOne() {
               ],
               [
                 "Who should skip it",
-                "Email-marketing-heavy teams; outside US/Canada",
+                "Email-marketing-heavy teams; outside the U.S., Canada, UK, and Australia",
                 "Anyone unwilling to invest setup time",
                 "Growing teams",
                 "Client-service studios",
