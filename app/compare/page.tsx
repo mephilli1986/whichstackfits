@@ -26,12 +26,23 @@ export default function Compare() {
           </p>
           <p className="mt-4 text-sm font-medium text-ink">Read the guide →</p>
         </Link>
+        <Link
+          href="/compare/crm"
+          className="rounded-lg border border-slate-200 bg-white p-6 transition-colors hover:border-ink"
+        >
+          <h2 className="text-lg font-semibold text-ink">CRM</h2>
+          <p className="mt-2 leading-relaxed text-slate-600">
+            Pipedrive vs HubSpot CRM vs Zoho CRM vs Less Annoying CRM — for
+            service businesses, not sales orgs.
+          </p>
+          <p className="mt-4 text-sm font-medium text-ink">Read the guide →</p>
+        </Link>
         <div className="rounded-lg border border-dashed border-slate-300 p-6">
           <h2 className="text-lg font-semibold text-slate-400">
-            CRM · Email &amp; automation · Scheduling
+            Email &amp; automation · Scheduling
           </h2>
           <p className="mt-2 leading-relaxed text-slate-500">
-            More comparison guides publish this week.
+            No guide published yet.
           </p>
         </div>
       </div>

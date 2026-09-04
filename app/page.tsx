@@ -5,6 +5,7 @@ const categories: { name: string; description: string; href?: string }[] = [
     name: "CRM",
     description:
       "Track leads, clients, and follow-ups without an enterprise sales pipeline you'll never use.",
+    href: "/compare/crm",
   },
   {
     name: "Email & automation",
