@@ -1,15 +1,16 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "All-in-one operations software for small service businesses — WhichStackFits",
+  title: "HoneyBook vs Dubsado vs 17hats vs Systeme.io | WhichStackFits",
   description:
-    "HoneyBook vs Dubsado vs 17hats vs Systeme.io for 1–20 person service businesses: who each is for, who it's not for, and what each actually includes.",
+    "Which all-in-one platform fits your small service business — with dated pricing and who each tool is not for. No single winner, just straight answers.",
 };
 
 const SYSTEME_URL =
   "https://systeme.io/?sa=sa017760682052e865e7e0fc3a668ff7a599d5d3d7";
 
 type Tool = {
+  id: string;
   name: string;
   url: string;
   affiliate?: boolean;
@@ -21,6 +22,7 @@ type Tool = {
 
 const tools: Tool[] = [
   {
+    id: "honeybook",
     name: "HoneyBook",
     url: "https://www.honeybook.com",
     forWho:
@@ -43,6 +45,7 @@ const tools: Tool[] = [
     ],
   },
   {
+    id: "dubsado",
     name: "Dubsado",
     url: "https://www.dubsado.com",
     forWho:
@@ -64,6 +67,7 @@ const tools: Tool[] = [
     ],
   },
   {
+    id: "17hats",
     name: "17hats",
     url: "https://www.17hats.com",
     forWho:
@@ -85,6 +89,7 @@ const tools: Tool[] = [
     ],
   },
   {
+    id: "systeme-io",
     name: "Systeme.io",
     url: SYSTEME_URL,
     affiliate: true,
@@ -225,13 +230,39 @@ export default function AllInOne() {
         ))}
       </ul>
 
+      <section className="mt-12">
+        <h2 className="text-2xl font-bold tracking-tight text-ink">
+          HoneyBook vs Dubsado
+        </h2>
+        <p className="mt-4 leading-relaxed text-slate-600">
+          This is the matchup most client businesses are actually deciding.{" "}
+          <a href="#honeybook" className="text-ink underline">HoneyBook</a> is
+          the faster path to a polished client experience — templates,
+          contracts, and payments work well out of the box, so a solo
+          photographer or planner can be booking clients the same week.{" "}
+          <a href="#dubsado" className="text-ink underline">Dubsado</a> trades
+          that speed for depth: conditional forms, multi-step workflows, and a
+          client portal you shape to your exact process, at a flat yearly
+          price that doesn&rsquo;t rise with polish. Choose HoneyBook if your
+          bottleneck is getting leads booked; choose Dubsado if you&rsquo;ve
+          outgrown template-shaped tools and will invest the setup days. If
+          neither fits, <a href="#17hats" className="text-ink underline">17hats</a>{" "}
+          covers a solo back office and{" "}
+          <a href="#systeme-io" className="text-ink underline">Systeme.io</a>{" "}
+          covers audience businesses instead.
+        </p>
+      </section>
+
       <div className="mt-12 space-y-12">
         {tools.map((t, i) => (
           <section
             key={t.name}
             className="rounded-lg border border-slate-200 bg-white p-6 sm:p-8"
           >
-            <h2 className="text-2xl font-bold tracking-tight text-ink">
+            <h2
+              id={t.id}
+              className="scroll-mt-8 text-2xl font-bold tracking-tight text-ink"
+            >
               {i + 1}. {t.name}
             </h2>
 

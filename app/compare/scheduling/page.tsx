@@ -2,12 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Scheduling software for small service businesses — WhichStackFits",
+  title: "Calendly vs Acuity vs Cal.com | WhichStackFits",
   description:
-    "Calendly vs Squarespace Scheduling (Acuity) vs Cal.com vs HoneyBook's scheduler for 1–20 person service businesses: who each is for, who it's not for, and what each actually includes.",
+    "Which scheduler fits a small service business — booking links, appointment shops, or a client studio. Dated pricing, honest gaps, no single winner.",
 };
 
 type Tool = {
+  id: string;
   name: string;
   url: string;
   forWho: string;
@@ -18,6 +19,7 @@ type Tool = {
 
 const tools: Tool[] = [
   {
+    id: "calendly",
     name: "Calendly",
     url: "https://calendly.com/pricing",
     forWho:
@@ -40,6 +42,7 @@ const tools: Tool[] = [
     ],
   },
   {
+    id: "acuity",
     name: "Squarespace Scheduling (Acuity)",
     url: "https://www.acuityscheduling.com/pricing",
     forWho:
@@ -61,6 +64,7 @@ const tools: Tool[] = [
     ],
   },
   {
+    id: "cal-com",
     name: "Cal.com",
     url: "https://cal.com/pricing",
     forWho:
@@ -82,6 +86,7 @@ const tools: Tool[] = [
     ],
   },
   {
+    id: "honeybook",
     name: "HoneyBook (as a scheduler)",
     url: "https://www.honeybook.com/pricing",
     forWho:
@@ -214,13 +219,38 @@ export default function Scheduling() {
         ))}
       </ul>
 
+      <section className="mt-12">
+        <h2 className="text-2xl font-bold tracking-tight text-ink">
+          Calendly vs Acuity
+        </h2>
+        <p className="mt-4 leading-relaxed text-slate-600">
+          These two get compared constantly, but they solve different
+          problems. <a href="#calendly" className="text-ink underline">Calendly</a>{" "}
+          is built for meetings: share a link, let people grab a slot, and
+          it&rsquo;s working the same afternoon, with a free plan to start.{" "}
+          <a href="#acuity" className="text-ink underline">Acuity</a> is built
+          for selling your time — classes, packages, memberships, gift
+          certificates, intake forms — which is why it has no free plan and
+          doesn&rsquo;t need one. Pick Calendly if bookings are conversations;
+          pick Acuity if bookings are the product. If you want maximum free
+          headroom and don&rsquo;t mind configuring things,{" "}
+          <a href="#cal-com" className="text-ink underline">Cal.com</a> undercuts
+          both, and{" "}
+          <a href="#honeybook" className="text-ink underline">HoneyBook</a>{" "}
+          makes sense only as part of its full client studio.
+        </p>
+      </section>
+
       <div className="mt-12 space-y-12">
         {tools.map((t, i) => (
           <section
             key={t.name}
             className="rounded-lg border border-slate-200 bg-white p-6 sm:p-8"
           >
-            <h2 className="text-2xl font-bold tracking-tight text-ink">
+            <h2
+              id={t.id}
+              className="scroll-mt-8 text-2xl font-bold tracking-tight text-ink"
+            >
               {i + 1}. {t.name}
             </h2>
 

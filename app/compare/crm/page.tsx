@@ -1,14 +1,15 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "CRM software for small service businesses — WhichStackFits",
+  title: "Pipedrive vs HubSpot vs Zoho CRM vs Less Annoying CRM | WhichStackFits",
   description:
-    "Pipedrive vs HubSpot CRM vs Zoho CRM vs Less Annoying CRM for 1–20 person service businesses: who each is for, who it's not for, and what each actually includes.",
+    "Four CRMs sized for a 1–20 person service business, with dated pricing and who should skip each one. No winner crown — the right fit depends on your bottleneck.",
 };
 
 const PIPEDRIVE_URL = "https://aff.trypipedrive.com/0573qp3twuo9";
 
 type Tool = {
+  id: string;
   name: string;
   url: string;
   affiliate?: boolean;
@@ -20,6 +21,7 @@ type Tool = {
 
 const tools: Tool[] = [
   {
+    id: "pipedrive",
     name: "Pipedrive",
     url: PIPEDRIVE_URL,
     affiliate: true,
@@ -44,6 +46,7 @@ const tools: Tool[] = [
     ],
   },
   {
+    id: "hubspot",
     name: "HubSpot CRM",
     url: "https://www.hubspot.com/pricing/crm",
     forWho:
@@ -64,6 +67,7 @@ const tools: Tool[] = [
     ],
   },
   {
+    id: "zoho-crm",
     name: "Zoho CRM",
     url: "https://www.zoho.com/crm/pricing.html",
     forWho:
@@ -86,6 +90,7 @@ const tools: Tool[] = [
     ],
   },
   {
+    id: "less-annoying-crm",
     name: "Less Annoying CRM",
     url: "https://www.lessannoyingcrm.com/pricing",
     forWho:
@@ -214,13 +219,39 @@ export default function Crm() {
         ))}
       </ul>
 
+      <section className="mt-12">
+        <h2 className="text-2xl font-bold tracking-tight text-ink">
+          Pipedrive vs HubSpot
+        </h2>
+        <p className="mt-4 leading-relaxed text-slate-600">
+          The most common head-to-head here.{" "}
+          <a href="#pipedrive" className="text-ink underline">Pipedrive</a>{" "}
+          charges from the first seat and earns it if your problem is deals
+          slipping through the cracks — its activity-driven pipeline is the
+          best of the four at forcing follow-ups.{" "}
+          <a href="#hubspot" className="text-ink underline">HubSpot CRM</a>{" "}
+          starts genuinely free for 2 users and 1,000 contacts, which makes it
+          the lower-risk way to find out whether a CRM will stick at all. The
+          catch runs in both directions: Pipedrive&rsquo;s extras are paid
+          add-ons, and HubSpot&rsquo;s paid hubs cost real money once you
+          outgrow the free tier. If neither shape fits, compare{" "}
+          <a href="#zoho-crm" className="text-ink underline">Zoho CRM</a> for
+          suite economics or{" "}
+          <a href="#less-annoying-crm" className="text-ink underline">Less Annoying CRM</a>{" "}
+          for flat-price simplicity.
+        </p>
+      </section>
+
       <div className="mt-12 space-y-12">
         {tools.map((t, i) => (
           <section
             key={t.name}
             className="rounded-lg border border-slate-200 bg-white p-6 sm:p-8"
           >
-            <h2 className="text-2xl font-bold tracking-tight text-ink">
+            <h2
+              id={t.id}
+              className="scroll-mt-8 text-2xl font-bold tracking-tight text-ink"
+            >
               {i + 1}. {t.name}
             </h2>
 
