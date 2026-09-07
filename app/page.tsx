@@ -16,6 +16,7 @@ const categories: { name: string; description: string; href?: string }[] = [
     name: "Scheduling & booking",
     description:
       "Let clients book calls and appointments without the back-and-forth email thread.",
+    href: "/compare/scheduling",
   },
   {
     name: "All-in-one platforms",

@@ -37,9 +37,22 @@ export default function Compare() {
           </p>
           <p className="mt-4 text-sm font-medium text-ink">Read the guide →</p>
         </Link>
+        <Link
+          href="/compare/scheduling"
+          className="rounded-lg border border-slate-200 bg-white p-6 transition-colors hover:border-ink"
+        >
+          <h2 className="text-lg font-semibold text-ink">
+            Scheduling &amp; booking
+          </h2>
+          <p className="mt-2 leading-relaxed text-slate-600">
+            Calendly vs Acuity vs Cal.com vs HoneyBook&rsquo;s scheduler —
+            booking links, appointment shops, and client studios.
+          </p>
+          <p className="mt-4 text-sm font-medium text-ink">Read the guide →</p>
+        </Link>
         <div className="rounded-lg border border-dashed border-slate-300 p-6">
           <h2 className="text-lg font-semibold text-slate-400">
-            Email &amp; automation · Scheduling
+            Email &amp; automation
           </h2>
           <p className="mt-2 leading-relaxed text-slate-500">
             No guide published yet.
