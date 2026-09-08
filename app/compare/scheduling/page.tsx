@@ -11,6 +11,7 @@ type Tool = {
   id: string;
   name: string;
   url: string;
+  affiliate?: boolean;
   forWho: string;
   notFor: string;
   includes: { label: string; note: string }[];
@@ -66,7 +67,8 @@ const tools: Tool[] = [
   {
     id: "cal-com",
     name: "Cal.com",
-    url: "https://cal.com/pricing",
+    url: "https://refer.cal.com/whichstackfits-xp8d",
+    affiliate: true,
     forWho:
       "Individuals who want the most generous free scheduler going — the free-forever plan has no usage limits: unlimited event types, unlimited calendars, email and SMS notifications, and Stripe/PayPal payment collection, plus a one-click Calendly import. It's open source, so technical owners can self-host or embed it. Teams pay only when they need shared availability.",
     notFor:
@@ -125,8 +127,7 @@ export default function Scheduling() {
         entire client studio. Here&rsquo;s who each actually fits.
       </p>
       <p className="mt-4 text-sm text-slate-500">
-        Some links on this site are affiliate links. None of the links on this
-        page are. Commissions never change the review.
+        Some links are affiliate links. Commissions do not change the review.
       </p>
 
       <p className="mt-6">
@@ -286,11 +287,16 @@ export default function Scheduling() {
               <a
                 href={t.url}
                 target="_blank"
-                rel="noopener"
+                rel={t.affiliate ? "sponsored noopener" : "noopener"}
                 className="inline-block rounded-md bg-ink px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-ink-dark"
               >
                 Visit {t.name.replace(" (as a scheduler)", "")}
               </a>
+              {t.affiliate && (
+                <span className="text-sm text-slate-500">
+                  Affiliate link. We may earn a commission.
+                </span>
+              )}
               {t.name.startsWith("HoneyBook") && (
                 <Link
                   href="/compare/all-in-one"
