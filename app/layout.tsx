@@ -3,6 +3,8 @@ import Link from "next/link";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.whichstackfits.com"),
+  alternates: { canonical: "./" },
   title: "WhichStackFits — Operations software for small service businesses",
   description:
     "We compare CRM, email & automation, scheduling, and all-in-one platforms for 1–20 person service businesses — with current pricing and who each tool is actually for.",
